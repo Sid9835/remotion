@@ -130,6 +130,7 @@ import {
 	PostmountExample,
 	PostmountWithStyles,
 } from './Postmount/PostmountExample';
+import {PREMIUM_BAR_CHART_DURATION, PremiumBarChart} from './PremiumBarChart';
 import {PremountedExample} from './Premount';
 import {PremountedRemoteVideos} from './Premount/RemoteVideos';
 import ReactSvg from './ReactSvg';
@@ -168,9 +169,9 @@ import {
 } from './StudioApis/SaveDefaultProps';
 import {TriggerCalculateMetadata} from './StudioApis/TriggerCalculateMetadata';
 import {WriteStaticFile} from './StudioApis/WriteStaticFile';
+import './style.css';
 import {SubtitleArtifact} from './SubtitleArtifact/SubtitleArtifact';
 import {SvgFilter} from './SvgFilter';
-import './style.css';
 import {Tailwind} from './Tailwind';
 import {TenFrameTester} from './TenFrameTester';
 import {TextStroke} from './TextStroke';
@@ -482,6 +483,14 @@ export const Index: React.FC = () => {
 				fps={30}
 				width={1280}
 				height={720}
+			/>
+			<Composition
+				id="PremiumBarChart"
+				component={PremiumBarChart}
+				durationInFrames={PREMIUM_BAR_CHART_DURATION}
+				fps={30}
+				width={1920}
+				height={1080}
 			/>
 			<Folder name="maptiler">
 				<Composition
